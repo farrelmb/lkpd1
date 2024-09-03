@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        .clr{
+            color: black;
+            background-color: red;
+
+        }
+        button{
+            background-color: green;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+       <div class="clr" id="countdownDisplay"></div>
+    <button id="startButton">Mulai Countdown</button>
+
+    <script>
+        const countdownDisplay = document.getElementById('countdownDisplay');
+        const startButton = document.getElementById('startButton');
+
+        let countdownInterval;
+        startButton.addEventListener('click', function() {
+            let countdownValue = 5;
+            countdownDisplay.textContent = countdownValue;
+            countdownDisplay.style.display = "block"
+
+            countdownInterval = setInterval(function() {
+                countdownValue--;
+                countdownDisplay.textContent = countdownValue;
+
+                if (countdownValue === 0) {
+                    clearInterval(countdownInterval);
+                    countdownDisplay.style.display = "none"
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

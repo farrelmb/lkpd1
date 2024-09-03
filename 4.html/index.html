@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" id="gambar-1" style="width: 200px;">
+    <select name="gambar" id="gambar">
+        <option value="revo.jpg">Revo</option>
+        <option value="gran.jpeg">Gran pick up</option>
+    </select> 
+    <select name="opacity" id="opacity">
+        <option value="1">1</option>
+        <option value="0.5">0.5</option>
+        <option value="0.2">0.2</option>
+    </select> 
+    <script>
+        document.getElementById("gambar").addEventListener("change", function() {
+            let result_gambar = document.getElementById("gambar").value
+            document.getElementById("gambar-1").src = result_gambar
+        })
+        document.getElementById("opacity").addEventListener("change", function() {
+            let result_opacity = document.getElementById("opacity").value
+            document.getElementById("gambar-1").style.opacity = result_opacity
+        })
+    </script>
+</body>
+</html>

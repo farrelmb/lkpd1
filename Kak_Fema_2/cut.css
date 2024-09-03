@@ -1,0 +1,28 @@
+.tombol{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    background-color: antiquewhite;
+    border: 2px solid grey;
+    border-radius: 20px;
+}
+.container1 {
+    width: 200px;
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+}
+
+.container2{
+    
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+}
+.container3{
+    width: 200px;
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+}
